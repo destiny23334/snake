@@ -1,0 +1,8 @@
+nacos:
+  prod:
+    ip: 192.
+  test:
+    ip: 192.
+  dev:
+    ip: 192.
+    port: 123
