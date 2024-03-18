@@ -8,6 +8,21 @@ import (
 	"snake/model"
 )
 
+// 生成假数据
+func generateFakeData(db *gorm.DB) {
+	users := []model.SysUser{
+		{UserName: "admin", NickName: "管理员", Password: "123"},
+		{UserName: "user1", NickName: "用户1", Password: "123"},
+		{UserName: "user2", NickName: "用户2", Password: "123"},
+	}
+	result := db.Create(&users)
+	if result.Error != nil {
+		panic(result.Error)
+	} else {
+		fmt.Printf("插入成功, %d 条数据\n", result.RowsAffected)
+	}
+}
+
 // 生成表结构
 func main() {
 	host := "127.0.0.1"
@@ -27,7 +42,8 @@ func main() {
 	}
 	err = db.AutoMigrate(&model.SysUser{})
 	if err != nil {
-		return
+		panic(err)
 	}
+	generateFakeData(db)
 
 }

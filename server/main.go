@@ -2,6 +2,7 @@ package main
 
 import (
 	"snake/pkg"
+	"snake/router"
 )
 
 func main() {
@@ -15,4 +16,11 @@ func main() {
 	// Initialize Database
 
 	// Initialize Middleware
+
+	// Start server
+	server := router.Routers()
+	err := server.Run(":11001")
+	if err != nil {
+		return
+	}
 }
