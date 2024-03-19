@@ -2,7 +2,7 @@ package sys
 
 import (
 	"github.com/gin-gonic/gin"
-	v1 "snake/api/v1"
+	"snake/api/v1"
 )
 
 type UserRouter struct {

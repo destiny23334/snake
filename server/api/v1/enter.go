@@ -1,6 +1,8 @@
 package v1
 
-import "snake/service"
+import (
+	"snake/service"
+)
 
 var (
 	userService = service.UserService{}

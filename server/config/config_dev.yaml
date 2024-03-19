@@ -1,0 +1,17 @@
+nacos:
+  ip: 127.0.0.1
+  port: 8848
+
+redis:
+  db: 0
+  addr: 127.0.0.1:6379
+  password: ""
+
+pgsql:
+  host: "127.0.0.1"
+  port: "5432"
+  db-name: "snake"
+  user-name: "postgres"
+  password: "888888"
+  max-idle-conns: 10
+  max-open-conns: 100

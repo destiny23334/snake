@@ -13,7 +13,7 @@ redis:
   password: ""
 
 pgsql:
-  path: ""
+  host: ""
   port: ""
   config: ""
   db-name: "snake"

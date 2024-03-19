@@ -1,17 +1,17 @@
 package main
 
 import (
-	"snake/pkg"
+	"snake/global"
 	"snake/router"
 )
 
 func main() {
 	// Initialize Log
-	pkg.Logger.Info("Logger initialized")
-
-	// Initialize Register Center
+	global.Logger.Info("Logger initialized")
 
 	// Load the Config
+	// TODO: 从配置中心读
+	global.LoadConfig()
 
 	// Initialize Database
 
