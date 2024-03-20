@@ -14,6 +14,7 @@ func main() {
 	global.LoadConfig()
 
 	// Initialize Database
+	global.InitDatabase()
 
 	// Initialize Middleware
 

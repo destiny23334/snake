@@ -14,17 +14,24 @@ func (u *UserApi) Login(c *gin.Context) {
 	if err != nil {
 		c.JSON(200, gin.H{
 			"status": 1,
-			"msg":    "参数错误",
+			"data":   gin.H{"msg": "参数错误"},
 		})
 		return
 	}
 	// 检查数据库是否匹配
-	//userService.Login(user)
+	result := userService.Login(loginRequest.UserName, loginRequest.Password)
 	// TODO: 获取token和过期时间
 	// 返回结果
-	c.JSON(200, gin.H{
-		"status": 0,
-		"msg":    "登录成功",
-	})
+	if result {
+		c.JSON(200, gin.H{
+			"status": 0,
+			"data":   gin.H{"msg": "登录成功"},
+		})
+	} else {
+		c.JSON(200, gin.H{
+			"status": 0,
+			"data":   gin.H{"msg": "用户名或密码错误"},
+		})
+	}
 
 }

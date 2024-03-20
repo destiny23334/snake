@@ -9,7 +9,7 @@ redis:
 
 pgsql:
   host: "127.0.0.1"
-  port: "5432"
+  port: 5432
   db-name: "snake"
   user-name: "postgres"
   password: "888888"
