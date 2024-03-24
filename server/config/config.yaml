@@ -1,0 +1,25 @@
+nacos:
+  prod:
+    ip: 192.
+  test:
+    ip: 192.
+  dev:
+    ip: 192.
+    port: 123
+
+redis:
+  db: 0
+  addr: 127.0.0.1:6379
+  password: ""
+
+pgsql:
+  host: ""
+  port: ""
+  config: ""
+  db-name: "snake"
+  username: "postgre"
+  password: "888888"
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: ""
+  log-zap: false
